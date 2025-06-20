@@ -1,45 +1,14 @@
-local v1 = loadstring(game:HttpGet(string.reverse("drowssap/niam/sbil-rof-spuk-cab-rof-skcab-llabdoolb/tnetnocresu/moc.tnetnocresubuhtig.w//:sptth")))()
-local v2 = v1:NewWindow(string.reverse("TPIRCS OTiAK"))
-local v3 = v2:NewSection(string.reverse("NIAM"))
-
-local u1 = {
-    "\x75\x6E\x69\x74\x5F\x62\x61\x6D\x62\x6F\x6F", "\x75\x6E\x69\x74\x5F\x62\x6C\x6F\x6F\x64\x76\x69\x6E\x65",
-    "\x75\x6E\x69\x74\x5F\x62\x72\x6F\x63\x63\x6F\x6C\x69", "\x75\x6E\x69\x74\x5F\x63\x61\x63\x74\x75\x73",
-    "\x75\x6E\x69\x74\x5F\x63\x61\x63\x74\x75\x73\x5F\x6F\x6C\x64", "\x75\x6E\x69\x74\x5F\x63\x61\x72\x72\x6F\x74\x73",
-    "\x75\x6E\x69\x74\x5F\x63\x68\x69\x6C\x69\x5F\x70\x65\x70\x70\x65\x72", "\x75\x6E\x69\x74\x5F\x63\x6F\x72\x6E",
-    "\x75\x6E\x69\x74\x5F\x66\x61\x72\x6D\x65\x72\x5F\x6E\x70\x63", "\x75\x6E\x69\x74\x5F\x67\x6E\x6F\x6D\x65\x5F\x6E\x70\x63",
-    "\x75\x6E\x69\x74\x5F\x67\x6F\x6C\x65\x6D", "\x75\x6E\x69\x74\x5F\x67\x72\x61\x70\x65\x73", "\x75\x6E\x69\x74\x5F\x6D\x6F\x6E\x65\x79\x5F\x74\x72\x65\x65",
-    "\x75\x6E\x69\x74\x5F\x6D\x75\x73\x68\x72\x6F\x6F\x6D", "\x75\x6E\x69\x74\x5F\x70\x61\x6C\x6D\x5F\x74\x72\x65\x65",
-    "\x75\x6E\x69\x74\x5F\x70\x65\x61\x73", "\x75\x6E\x69\x74\x5F\x70\x69\x6E\x65\x61\x70\x70\x6C\x65",
-    "\x75\x6E\x69\x74\x5F\x70\x6F\x74\x61\x74\x6F", "\x75\x6E\x69\x74\x5F\x72\x6F\x73\x65\x73", "\x75\x6E\x69\x74\x5F\x73\x75\x6E\x66\x6C\x6F\x77\x65\x72",
-    "\x75\x6E\x69\x74\x5F\x74\x6F\x6D\x61\x74\x6F\x5F\x70\x6C\x61\x6E\x74",
-    "\x75\x6E\x69\x74\x5F\x74\x6F\x6D\x61\x74\x6F\x5F\x70\x6C\x61\x6E\x74\x5F\x6F\x6C\x64",
-    "\x75\x6E\x69\x74\x5F\x76\x65\x6E\x75\x73\x5F\x66\x6C\x79\x74\x72\x61\x70", "\x75\x6E\x69\x74\x5F\x77\x61\x74\x65\x72\x6D\x65\x6C\x6F\x6E"
-}
-
-local sel = u1[1]
-
-v3:CreateDropdown("\83\101\108\101\99\116\32\85\110\105\116", u1, 1, function(t)
-    sel = t
-end)
-
-v3:CreateButton("\83\112\97\119\110\32\85\110\105\116", function()
-    local p = game.Players.LocalPlayer
-    if not p.Character or not p.Character:FindFirstChild("\72\117\109\97\110\111\105\100\82\111\111\116\80\97\114\116") then return end
-
-    local pos = p.Character.HumanoidRootPart.Position
-    local cf = CFrame.new(pos) * CFrame.Angles(math.pi, 0, math.pi)
-
-    local args = {
-        [1] = sel,
-        [2] = {
-            ["Valid"] = true,
-            ["WasFastPlaced"] = false,
-            ["Position"] = pos,
-            ["CF"] = cf,
-            ["Rotation"] = 180
-        }
-    }
-
-    game:GetService("\82\101\112\108\105\99\97\116\101\100\83\116\111\114\97\103\101").RemoteFunctions.PlaceUnit:InvokeServer(unpack(args))
+local a=loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local b=a:NewWindow("KAITO SCRIPT")
+local c=b:NewSection("MAIN")
+local d={"unit_bamboo","unit_bloodvine","unit_broccoli","unit_cactus","unit_cactus_old","unit_carrots","unit_chili_pepper","unit_corn","unit_farmer_npc","unit_gnome_npc","unit_golem","unit_grapes","unit_money_tree","unit_mushroom","unit_palm_tree","unit_peas","unit_pineapple","unit_potato","unit_roses","unit_sunflower","unit_tomato_plant","unit_tomato_plant_old","unit_venus_flytrap","unit_watermelon"}
+local e=d[1]
+c:CreateDropdown("Select Unit",d,1,function(f)e=f end)
+c:CreateButton("Spawn Unit",function()
+    local g=game.Players.LocalPlayer
+    if not g.Character or not g.Character:FindFirstChild("HumanoidRootPart") then return end
+    local h=g.Character.HumanoidRootPart.Position
+    local i=CFrame.new(h)*CFrame.Angles(math.pi,0,math.pi)
+    local j={[1]=e,[2]={["Valid"]=true,["WasFastPlaced"]=false,["Position"]=h,["CF"]=i,["Rotation"]=180}}
+    game:GetService("ReplicatedStorage").RemoteFunctions.PlaceUnit:InvokeServer(unpack(j))
 end)
